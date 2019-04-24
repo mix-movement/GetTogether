@@ -106,6 +106,7 @@ TEMPLATES = [
                 "simple_ga.context_processors.events",
                 "totd.context_processors.tips",
                 "accounts.decorators.check_setup",
+                "get_together.context_processors.theme_engine",
             ]
         },
     }
@@ -208,6 +209,12 @@ MESSAGE_TAGS = {
     messages.WARNING: "alert-warning",
     messages.ERROR: "alert-danger",
 }
+
+
+THEME_CONFIG = {
+    "buttons": {"host_event": {"label": _("Make a mix"), "icon": "far fa-user"}}
+}
+
 
 # Keep this at the end of settings.py to allow overriding settings in local deployments
 try:
